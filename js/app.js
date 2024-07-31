@@ -8,18 +8,25 @@ const messageEl = document.getElementById('message')
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let board
-let turn 
-let winner 
-let tie 
+let board = ['board[0]', 'board[1]', 'board[2]', 'board[3]', 'board[4]', 'board[5]', 'board[6]', 'board[7]', 'board[8]']
+let turn = 'X'
+let winner = false
+let tie = false
 
 /*------------------------ Cached Element References ------------------------*/
 
 
 
 /*-------------------------------- Functions --------------------------------*/
+const init = () => {
+    
+}
+    console.log(init)
 
+const render = () => {
 
+}
+    console.log(render)
 
 /*----------------------------- Event Listeners -----------------------------*/
 

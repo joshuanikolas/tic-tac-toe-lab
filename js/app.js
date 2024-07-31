@@ -1,6 +1,10 @@
 /*-------------------------------- Constants --------------------------------*/
 
+const squareEls = document.querySelectorAll('.board')
+        console.log(squareEls)
 
+const messageEl = document.getElementById('message')
+        console.log(messageEl)
 
 /*---------------------------- Variables (state) ----------------------------*/
 

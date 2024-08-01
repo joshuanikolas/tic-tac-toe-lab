@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-const squareEls = document.querySelectorAll('.board')
+const squareEls = document.querySelectorAll('.sqr')
         console.log(squareEls)
 
 const messageEl = document.getElementById('message')
@@ -8,7 +8,7 @@ const messageEl = document.getElementById('message')
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let board = ['board[0]', 'board[1]', 'board[2]', 'board[3]', 'board[4]', 'board[5]', 'board[6]', 'board[7]', 'board[8]']
+let board = ['', '', '', '', '', '', '', '', '']
 let turn = 'X'
 let winner = false
 let tie = false
@@ -19,14 +19,38 @@ let tie = false
 
 /*-------------------------------- Functions --------------------------------*/
 const init = () => {
-    
+    board = ['X', 'O', '', '', '', '', '', '', '']
+    render()
 }
     console.log(init)
 
 const render = () => {
-
+        updateBoard()
+        updateMessage()
 }
     console.log(render)
+
+const updateBoard = () => {
+        board.forEach((cell, index) => {
+            squareEls[index].textContent = cell;
+            
+        });
+}
+    console.log(updateBoard)
+
+    const updateMessage = () => {
+        if (!winner && !tie) {
+            messageEl.textContent = `It's ${turn}'s turn`
+        } else if (!winner && !tie) {
+            messageEl.textContent = 'It is a tie!'
+        } else {
+            messageEl.textContent = `${winner} has won!`
+        }
+    }
+    init()
+
+
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
